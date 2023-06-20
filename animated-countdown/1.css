@@ -28,7 +28,7 @@ body{
 }
 
 #countDownContainer.out{
-    animation: shrink 0.3s ease 4s 1;
+    animation: shrink 0.3s ease 0s 1;
 }
 #count{
     position: absolute;
@@ -41,7 +41,7 @@ body{
     text-align: center;
 }
 #count.in{
-    animation: countDown 1s ease 0s 4;
+    animation: countDown 0.9s ease;
 }
 #countDownContainer p{
     position: absolute;
