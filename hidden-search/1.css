@@ -1,0 +1,52 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: darkseagreen;
+}
+
+div {
+    position: relative;
+}
+
+input {
+    padding:10px;
+    background-color: rgb(180, 215, 180);
+    width: 50px;
+    height: 50px;
+    border: 1px solid rgba(0, 90, 0, 0.1);
+    border-radius: 2px;
+    box-shadow: 0px 0px 10px 3px rgba(0, 90, 0, 0.1) inset;
+    transition: 1s ease;
+    font-size: 1.5rem;
+    color:rgb(91, 89, 89);
+}
+
+input:focus {
+    outline: none;
+    background-color: rgb(187, 224, 187);
+}
+
+input.transform{
+    width: 350px;
+}
+
+button {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    border: none;
+    opacity: 0.65;
+    background-color: transparent;
+    background-image: url('./magnifier.svg');
+    color: darkgreen;
+}
