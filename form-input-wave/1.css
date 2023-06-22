@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: o;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(99, 124, 55);
+    font-family: Muli;
+    font-size: 1.2rem;
+}
+
+#container {
+    width: 400px;
+    height: 500px;
+    padding: 50px;
+    background-color: rgb(76, 94, 42);
+    border-radius: 10px;
+    color: azure;
+    position: relative;
+}
+
+h1,
+input,
+label {
+    width: 300px;
+    height: 50px;
+    position: absolute;
+    background-color: transparent;
+    border: none;
+    line-height: 50px;
+}
+
+h1 {
+    height: 100px;
+    top: 25px;
+    text-align: center;
+}
+
+label[for='email'] {
+    top: 30%;
+}
+
+.waveUp {}
+
+#email {
+    top: 30%;
+}
+
+label[for='password'] {
+    top: 50%;
+}
+
+#password {
+    top: 50%
+}
+
+#email,
+#password {
+    border-bottom: 2px solid azure;
+    font-size: 1.2rem;
+    color: azure;
+}
+
+#email:focus,#password:focus {
+    outline: 0;
+    border-bottom-color: rgb(168, 198, 148);
+}
+
+label span {
+    display: inline-block;
+    transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+input:focus+label span,
+input:valid+label span {
+    color: rgb(168, 198, 148);
+    transform: translateY(-30px);
+}
+
+input[type='submit'] {
+    top: 68%;
+    background-color: rgb(168, 198, 148);
+    border-radius: 10px;
+    font-size: 1.2rem;
+    color: darkgreen;
+}
+
+p {
+    position: absolute;
+    bottom: 50px;
+    font-size: 1rem;
+}
+
+#register {
+    border: none;
+    font-size: 1rem;
+    color: rgb(175, 204, 155);
+    background-color: transparent;
+
+}
