@@ -1,0 +1,46 @@
+*{
+    box-sizing: border-box;
+    margin:0
+}
+
+body{
+    height:100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: cornflowerblue;
+    position: relative;
+}
+
+#outerContainer{
+    width: 90%;
+    height: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+}
+
+#speedContainer{
+    width: 120px;
+    height: 50px;
+    background-color: rgb(82, 115, 176);
+    position: absolute;
+    bottom: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+span{
+    white-space: pre;
+}
+
+#number{
+    display: inline-block;
+    width: 50px;
+    height: 30px;
+    background-color: rgb(199, 230, 243);
+    overflow-y: scroll;
+    border: none;
+}
