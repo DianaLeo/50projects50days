@@ -1,0 +1,74 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    background-color: rgb(163, 208, 245);
+    overflow: hidden;
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+}
+
+
+
+button {
+    border: none;
+    border-radius: 5px;
+    width: 170px;
+    height: 60px;
+    background-color: rgb(49, 115, 169);
+    font-size: 1.3rem;
+    color: rgb(255, 255, 255);
+    position: relative;
+    overflow: hidden;
+}
+
+.ripple {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: white;
+    opacity: 0;
+}
+
+
+.ripple.expand {
+    animation-name: lala;
+    animation-duration: 0.5s;
+}
+
+@keyframes lala {
+    0% {
+        transform: scale(100%);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1000%);
+        opacity: 0;
+    }
+}
+
+
+.bodyRipple {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: radial-gradient(transparent 0%, rgb(255, 255, 255) 100%);
+    opacity: 0;
+    transition:1s ease-out;
+}
+
+.bodyRipple.bodyExpand {
+    opacity: 1;
+    transform: scale(300%);
+}

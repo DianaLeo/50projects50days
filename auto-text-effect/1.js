@@ -1,7 +1,7 @@
 var text = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum molestias velit sapiente beatae nostrum voluptates pariatur dignissimos reprehenderit possimus autem iusto dolorum rerum officia, excepturi praesentium nesciunt? Quasi, ab illo."
 let textLength = text.length;
 
-const outerContainer = document.querySelector('#outerContainer');
+const textContainer = document.querySelector('#textContainer');
 const textP = document.querySelector('#text');
 const speedNumber = document.querySelector('input');
 
