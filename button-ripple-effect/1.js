@@ -1,18 +1,20 @@
 const button = document.querySelector('button');
+const background = document.querySelector('.background');
 
 
 button.addEventListener('click', (e) => {
-    // if (divRipple.classList.contains('expand')) {
-    //     divRipple.classList.remove('expand');
-    // }
-
     const divRipple = document.createElement('div');
     divRipple.setAttribute('class', 'ripple');
     button.appendChild(divRipple);
-    console.log(divRipple.getBoundingClientRect().width);
+
     let rippleWidth = divRipple.getBoundingClientRect().width;
-    divRipple.style.top = `${e.offsetY - rippleWidth / 2}px`;
-    divRipple.style.left = `${e.offsetX - rippleWidth / 2}px`;
+    const buttonTop = button.getBoundingClientRect().top;
+    const buttonLeft = button.getBoundingClientRect().left;
+    const rippleTop = e.clientY - buttonTop;
+    const rippleLeft = e.clientX - buttonLeft;
+    
+    divRipple.style.top = `${rippleTop - rippleWidth / 2}px`;
+    divRipple.style.left = `${rippleLeft - rippleWidth / 2}px`;
     divRipple.classList.add('expand');
     setTimeout(() => {
         divRipple.classList.remove('expand');
@@ -21,21 +23,20 @@ button.addEventListener('click', (e) => {
 })
 
 
-
-document.body.addEventListener('click',(e)=>{
-    console.log('click');
+background.addEventListener('click',(e)=>{
+    console.log(e.clientX,e.clientY,e.offsetX,e.offsetY,e.pageX,e.pageY);
     const bodyRipple = document.createElement('div');
     bodyRipple.setAttribute('class', 'bodyRipple');
-    document.body.appendChild(bodyRipple);
+    background.appendChild(bodyRipple);
+
     let rippleWidth = bodyRipple.getBoundingClientRect().width;
-    console.log(bodyRipple.getBoundingClientRect().width);
-    bodyRipple.style.top = `${e.offsetY - rippleWidth / 2}px`;
-    bodyRipple.style.left = `${e.offsetX - rippleWidth / 2}px`;
+    bodyRipple.style.top = `${e.clientY - rippleWidth / 2}px`;
+    bodyRipple.style.left = `${e.clientX - rippleWidth / 2}px`;
     bodyRipple.classList.add('bodyExpand');
     setTimeout(() => {
         bodyRipple.classList.remove('bodyExpand');
         setTimeout(() => {
-            document.body.removeChild(bodyRipple);
+            background.removeChild(bodyRipple);
         }, 1000);
     }, 1000);
 
