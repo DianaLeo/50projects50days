@@ -1,0 +1,84 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #edecec;
+  height: 100vh;
+  position: relative;
+}
+
+.cardContainer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  width: 350px;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.cardContainer .cardImg {
+  width: 100%;
+  height: 200px;
+  background-color: whitesmoke;
+}
+
+.cardContainer .content {
+  padding: 30px;
+}
+
+.cardContainer h3,
+.cardContainer h4,
+.cardContainer p {
+  background-color: whitesmoke;
+  height: 10px;
+}
+
+.cardContainer p {
+  margin-top: 10px;
+}
+
+.cardContainer h3 {
+  margin-bottom: 40px;
+}
+
+.cardContainer .authorWrapper {
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.cardContainer .authorWrapper .authorImg {
+  flex: 0 0 auto;
+  width: 40px;
+  height: 40px;
+  background: whitesmoke;
+  border-radius: 50%;
+}
+
+.cardContainer .authorWrapper .authorInfo {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-left: 10px;
+}
+
+.backgroundWave {
+  background-image: linear-gradient(to right, whitesmoke 0%, rgba(157, 155, 155, 0.1) 10%, whitesmoke 20%);
+  background-size: 150% 100%;
+  animation: wave 1s linear infinite;
+}
+
+@keyframes wave {
+  0% {
+    background-position: 50% 0;
+  }
+  100% {
+    background-position: -250% 0;
+  }
+}
