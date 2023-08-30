@@ -16,8 +16,6 @@ body {
     translate: -50% -50%;
 }
 
-
-
 button {
     border: none;
     border-radius: 5px;
@@ -32,25 +30,20 @@ button {
 
 .ripple {
     position: absolute;
-    width: 30px;
-    height: 30px;
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
     background-color: white;
-    opacity: 0;
-}
-
-.ripple.expand {
+    opacity: 1;
+    translate: -50% -50%;
+    transform: scale(0);
     animation: scale 0.5s;
 }
 
-@keyframes scale {
-    0% {
-        transform: scale(100%);
-        opacity: 1;
-    }
 
-    100% {
-        transform: scale(1000%);
+@keyframes scale {
+    to {
+        transform: scale(3);
         opacity: 0;
     }
 }

@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -8,6 +9,7 @@ body {
   background-color: #edecec;
   height: 100vh;
   position: relative;
+  font-family: 'Roboto', sans-serif;
 }
 
 .cardContainer {
@@ -26,46 +28,61 @@ body {
   width: 100%;
   height: 200px;
   background-color: whitesmoke;
+  overflow: hidden;
+}
+
+.cardContainer .cardImg img {
+  width: 100%;
+  height: 100%;
 }
 
 .cardContainer .content {
-  padding: 30px;
+  padding: 20px 30px;
 }
 
-.cardContainer h3,
-.cardContainer h4,
-.cardContainer p {
-  background-color: whitesmoke;
-  height: 10px;
+.cardContainer .content h3 {
+  margin-bottom: 30px;
 }
 
-.cardContainer p {
+.cardContainer .content > p {
   margin-top: 10px;
-}
-
-.cardContainer h3 {
-  margin-bottom: 40px;
+  line-height: 1.5rem;
 }
 
 .cardContainer .authorWrapper {
   display: flex;
   align-items: center;
-  margin-top: 30px;
+  justify-content: center;
+  margin-top: 20px;
 }
 
 .cardContainer .authorWrapper .authorImg {
   flex: 0 0 auto;
   width: 40px;
   height: 40px;
-  background: whitesmoke;
+  background-color: whitesmoke;
   border-radius: 50%;
+  overflow: hidden;
+}
+
+.cardContainer .authorWrapper .authorImg img {
+  width: 100%;
+  height: 100%;
 }
 
 .cardContainer .authorWrapper .authorInfo {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   width: 100%;
   margin-left: 10px;
+  line-height: 1.5rem;
+}
+
+.backgroundText {
+  background-color: whitesmoke;
+  height: 10px;
+  margin-top: 10px;
 }
 
 .backgroundWave {

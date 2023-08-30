@@ -18,4 +18,5 @@ function update(e){
     let add = range.value * increment;
 
     label.style.left = `${add}px`;
+    range.style.backgroundSize = `${range.value}% 100%`;
 }
