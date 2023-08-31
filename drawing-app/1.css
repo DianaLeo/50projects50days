@@ -1,0 +1,59 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: whitesmoke;
+  height: 100vh;
+  position: relative;
+}
+
+#myCanvas {
+  /* max-width: 700px; Cannot set persentage for canvas size*/
+  margin: 0 auto;
+  background-color: white;
+  position: absolute;
+  left: 50%;
+  top: 1%;
+  translate: -50% 0;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.buttons {
+  width: 90%;
+  height: 60px;
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  translate: -50% 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.5rem;
+}
+
+.buttons button, .colorPicker {
+  width: 50px;
+  height: 50px;
+  border: none;
+  background-color: white;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+  transition: 0.5s;
+}
+
+.buttons .left {
+  width: 220px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.decrease:active,
+.increase:active,
+.colorPicker:active,
+.clear:active {
+  translate: 2px 2px;
+  background-color: #d0d5da;
+}
